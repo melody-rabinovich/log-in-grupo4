@@ -11,8 +11,8 @@ function validarRegistro(){
     let contraseña1 = document.getElementById('contraseñaRegistro').value;
     let contraseña2 = document.getElementById('contraseña2Registro').value;
 
-    if (contraseña1 == contraseña2){
+    if (contraseña1 != contraseña2){
         // edad.style.color = 'red';
-        alert('edad minima');
+        alert('Las contraseñas no coinciden');
     }
 }
