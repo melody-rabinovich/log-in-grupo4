@@ -54,6 +54,16 @@ function validarUsuario(){
     }
 }
 
+function validarTelefono(inputtxt){
+    var nroTel  = /^\d{10}$/;
+    if(inputtxt.match(nroTel)){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
 function validarRegistro(){
     console.log(datosUsuarios);
     const signIn = document.ventana;
@@ -64,6 +74,7 @@ function validarRegistro(){
     let apellido = signIn.apellido.value
     let edad = signIn.edad.value;
     let profesion = signIn.select.value;
+    let telefono = signIn.txtTelefono.value;
     
     let validarCaptcha =  signIn.captcha.value;
     console.log(validarCaptcha);
@@ -78,6 +89,11 @@ function validarRegistro(){
 
     if(validarCaptcha != "v4lid4r r3gistr0"){
         document.getElementById('lblErrorRegistro').innerText = "El captcha no coincide";
+        return false;
+    }
+
+    if(!validarTelefono(telefono)){
+        document.getElementById('lblErrorRegistro').innerText = "El telefono no es correcto";
         return false;
     }
 
