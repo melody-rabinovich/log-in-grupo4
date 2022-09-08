@@ -79,6 +79,13 @@ function validarRegistro(){
 
     document.getElementById('nombreRegistro').value = '';
     document.getElementById('apellidoRegistro').value = '';
+    document.getElementById('usuarioRegistro').value = '';
+    document.getElementById('contraseñaRegistro').value = '';
+    document.getElementById('contraseña2Registro').value = '';
+    document.getElementById('edadRegistro').value = '';
+    document.getElementById('select').value = '-------------';
+    document.getElementById('lblErrorRegistro').value = '';
+
     abrirLogin();
     return false;
 }
