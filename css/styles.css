@@ -1,0 +1,20 @@
+#signIn
+{  
+	position:absolute;
+	left: 50px; right: 50px; top: 50px;
+}
+#logIn{
+    position:absolute;
+    left: 50px; right: 50px; top: 50px;
+}
+
+#btn {
+   
+    left: auto; right: auto; top: auto;
+}
+
+#staticBackdrop{
+
+    opacity: 1; transform: scale(1);
+    
+}
