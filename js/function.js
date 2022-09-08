@@ -50,7 +50,7 @@ function validarUsuario(){
         alert('Bienvenido!! - ' + datosUsuarios.apellido + ', ' + datosUsuarios.nombre + ' (' + datosUsuarios.edad + ')'); 
         document.getElementById('txtUsuario').value = '';
         document.getElementById('txtPassword').value = '';
-        document.getElementById('lblError') = '';
+        document.getElementById('lblError').value = '';
     }
 }
 
@@ -77,5 +77,8 @@ function validarRegistro(){
     datosUsuarios.apellido = apellido;
     datosUsuarios.profesion = profesion;
 
+    document.getElementById('nombreRegistro').value = '';
+    document.getElementById('apellidoRegistro').value = '';
     abrirLogin();
+    return false;
 }
