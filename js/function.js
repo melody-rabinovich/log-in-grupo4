@@ -64,9 +64,20 @@ function validarRegistro(){
     let apellido = signIn.apellido.value
     let edad = signIn.edad.value;
     let profesion = signIn.select.value;
+    
+    let validarCaptcha =  signIn.captcha.value;
+    console.log(validarCaptcha);
+ 
+    // let captcha2 = getElementById('captcha').value;
+    // console.log(captcha2);
 
     if(password != passwordRepeat){
         document.getElementById('lblErrorRegistro').innerText = "Las contrasenas no coinciden";
+        return false;
+    }
+
+    if(validarCaptcha != "v4lid4r r3gistr0"){
+        document.getElementById('lblErrorRegistro').innerText = "El captcha no coincide";
         return false;
     }
 
@@ -85,6 +96,8 @@ function validarRegistro(){
     document.getElementById('edadRegistro').value = '';
     document.getElementById('select').value = '-------------';
     document.getElementById('lblErrorRegistro').value = '';
+    document.getElementById('captcha').value = '';
+
 
     abrirLogin();
     return false;
